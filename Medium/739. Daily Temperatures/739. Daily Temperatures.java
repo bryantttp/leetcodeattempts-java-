@@ -15,11 +15,11 @@ class Solution {
         for (int i = 0; i < temperatures.length; i++){
             while (checker > -1 && temperatures[i] > temperatures[index[checker]]){
                 int tempValue = index[checker];
-                checker--;
-                answer[tempValue] = i - tempValue;
+                checker--; // This moves back to the index of the previous temperature that would be checked again in the while loop
+                answer[tempValue] = i - tempValue; // Difference between index of the temperatures
             }
-            checker++;
-            index[checker] = i;
+            checker++; // This helps to loop through the index array
+            index[checker] = i; // This records the temperature's index
         }
         return answer;
     }
