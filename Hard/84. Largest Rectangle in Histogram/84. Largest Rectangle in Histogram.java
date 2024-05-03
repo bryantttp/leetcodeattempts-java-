@@ -4,7 +4,7 @@ class Solution {
         // Approach
         // 1) Create two stacks that records the index where the rectangle could extend to based on its height and the height
         // 2) Iterate through the list 
-        // 3) Create 2 int values, one to record the answer and a counter that records how far the rectangle could extend horizontally
+        // 3) Create 3 int values, one to record the answer, one to record the last index stack value and a counter that records how far the rectangle could extend horizontally
         // 4) While loop to check if the iterated height is smaller than the peeked height stack value, counter += 1, verify the max area and pop the value from both stacks
         // 5) Then push the current height into height stack and index - counter into the index stack
         // 6) Once iteration is done, while loop to check if the size of height/index stack is equal to zero
